@@ -1,0 +1,39 @@
+.container_contact {
+    background-color: #FFF5F7;
+    width: 100%;
+    height: 1146px;
+}
+
+.contact {
+
+    padding-left: 126px;
+    padding-right: 126px;
+
+    &_main {
+
+        display: flex;
+
+        &__input {
+            width: 688px;
+            height: 340px;
+            background-color: white;
+            margin-right: 8px;
+            padding: 32px 0 0 24px;
+            border-radius: 5px;
+
+            input {
+                background-color:
+                    #EDF2F7;
+            }
+        }
+
+        &__info {
+            margin-left: 8px;
+            width: 484px;
+            height: 340px;
+            background-color: white;
+            padding: 32px 0 0 24px;
+            border-radius: 5px;
+        }
+    }
+}
