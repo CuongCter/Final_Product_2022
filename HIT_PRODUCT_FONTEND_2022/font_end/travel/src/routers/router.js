@@ -10,12 +10,15 @@ import ChangePass from "../modules/Auth/ChangePass/ChangePass";
 import Room from "../../src/pages/Room";
 import Blog from "../../src/pages/Blog";
 import InsideBlog from "../../src/pages/InsideBlog";
-
-
 import PickRoom from "../pages/PickRoom";
 import Contact from "../pages/Contact";
 import Services from "../pages/Services";
-
+import User from '../pages/User';
+import UserRoom from '../pages/UserRoom';
+import UserPosts from '../pages/UserPosts';
+import UserAssess from '../pages/UserAssess.jsx';
+import UserPromotion from '../pages/UserPromotion.jsx';
+import Location2 from "../pages/Location2";
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/login', component: Login },
@@ -23,14 +26,19 @@ const publicRoutes = [
     { path: '/pass', component: ForgotPassword },
     { path: '/location', component: Locations },
     { path: '/changepass', component: ChangePass },
-    { path: '/room', component: Room},
+    { path: '/hotel/:id', component: Room},
     { path: '/blog', component: Blog },
     { path: '/insideBlog', component: InsideBlog},
     { path: '/blog', component: Blog},
     { path: '/bookRoom', component: PickRoom},
     { path: '/contact', component: Contact},
-    { path: '/services', component: Services}
-
+    { path: '/services', component: Services},
+    { path: '/location2', component: Location2},
+    { path: '/user', component: User },
+    { path: '/user2', component: UserRoom },
+    { path: '/user3', component: UserPosts},
+    { path: '/user4', component: UserAssess },
+    { path: '/user5', component: UserPromotion},
 ]; 
 
 

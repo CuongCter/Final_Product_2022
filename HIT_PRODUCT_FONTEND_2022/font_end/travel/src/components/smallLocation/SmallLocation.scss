@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.small-location {
+  padding: 126px 126px 43px 126px ;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.everywhere {
+  width: 60%;
+}
+.six-location {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  padding-bottom: 25px;
+  color: #000000;
+}
+.text-location {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  padding-bottom: 50px;
+  color: #000000;
+}
+.number-theme {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.text1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  padding-bottom: 25px;
+}
+.img-city {
+  width: 738px;
+  height: 558px;
+  padding-bottom: 25px;
+  
+}
+.text2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  padding-bottom: 35px;
+}
+
+.add a {
+  color: rgb(241, 87, 138);
+}
+.add {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+.bvt {
+  width: 30%; 
+}
+.bvt img {
+  width: 370px;
+  height: 227px;
+  position: absolute;
+  border-radius: 5px;
+}
+.bvt p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  padding-top:35px ;
+  width: 320px;
+  text-align: center;
+  position: absolute;
+  color: #FFFFFF;
+
+}
+.bvt h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+}
+
+// **************************************
+// Tablet
+@media only screen and (min-width: 740px) and (max-width:1023px) {
+  .small-location {
+    padding: 126px 26px 43px 26px ;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .everywhere {
+    width: 100%;
+  }
+  .bvt {
+    padding-top: 30px;
+    width: 100%; 
+  }
+}
+
+ // Mobile
+ @media only screen and (max-width: 739px) {
+  .small-location {
+    padding: 126px 26px 43px 26px ;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .everywhere {
+    width: 100%;
+  }
+  .bvt {
+    padding: 30px 20px 200px 0px;
+
+    width: 100%;
+  }
+ }

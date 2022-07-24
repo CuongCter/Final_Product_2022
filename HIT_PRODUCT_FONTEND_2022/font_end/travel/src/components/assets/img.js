@@ -5,6 +5,10 @@ import dalat from './imgs/da lat.jpg'
 import phuquoc from './imgs/phú quốc.jpg'
 import hoian from './imgs/hoi an.jpg'
 import sale from './imgs/flashsalelogo.png'
+import cuong from './imgs/Cuong.JPG'
+import dung from './imgs/Dung.jpg'
+import namanh from './imgs/NamAnh.png'
+import hoang from './imgs/Hoang.jpg'
 export const imgs = {
     imgSale: sale,
     img1: hanoi,
@@ -19,4 +23,8 @@ export const imgs = {
     title1: 'Phú Quốc',
     img6: hoian,
     title1: 'Hội An',
+    imgCuong : cuong,
+    imgDung: dung,
+    imgHoang: hoang,
+    imgNamAnh: namanh
 }

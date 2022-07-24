@@ -1,7 +1,7 @@
 import React from 'react'
 import {dataUserMeetUs} from './dataMeetUs'
 import './MeetUs.scss'
-
+import { imgs } from '../assets/img'
 const MeetUs = () => {
   return (
     <div className='meet-us'>

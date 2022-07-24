@@ -1,8 +1,9 @@
+import { imgs } from '../assets/img'
 export const dataUserMeetUs = [
   {
      id: '1',
      imgCover: 'https://meta.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
-     imgAvt: 'https://anhdep123.com/wp-content/uploads/2021/05/hinh-avatar-trang.jpg',
+     imgAvt: imgs.imgNamAnh,
      name: 'NL Nam Anh',
      comment: 'Sự hài lòng của các bạn là niềm vui của chúng tôi',
      linkFB: 'https://www.facebook.com/vuquyh202/',
@@ -20,7 +21,7 @@ export const dataUserMeetUs = [
   {
      id: '3',
      imgCover: 'https://meta.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
-     imgAvt: 'https://anhdep123.com/wp-content/uploads/2021/05/hinh-avatar-trang.jpg',
+     imgAvt: imgs.imgCuong,
      name: 'Văn Cương',
      comment: 'Sự hài lòng của các bạn là niềm vui của chúng tôi',
      linkFB: 'https://www.facebook.com/vuquyh202/',
@@ -29,7 +30,7 @@ export const dataUserMeetUs = [
   {
      id: '4',
      imgCover: 'https://meta.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
-     imgAvt: 'https://anhdep123.com/wp-content/uploads/2021/05/hinh-avatar-trang.jpg',
+     imgAvt: imgs.imgDung,
      name: 'Lý Thị Dung',
      comment: 'Sự hài lòng của các bạn là niềm vui của chúng tôi',
      linkFB: 'https://www.facebook.com/vuquyh202/',
@@ -38,7 +39,7 @@ export const dataUserMeetUs = [
   {
      id: '5',
      imgCover: 'https://meta.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
-     imgAvt: 'https://anhdep123.com/wp-content/uploads/2021/05/hinh-avatar-trang.jpg',
+     imgAvt: imgs.imgHoang,
      name: 'Xuân Hoàng',
      comment: 'Sự hài lòng của các bạn là niềm vui của chúng tôi',
      linkFB: 'https://www.facebook.com/vuquyh202/',

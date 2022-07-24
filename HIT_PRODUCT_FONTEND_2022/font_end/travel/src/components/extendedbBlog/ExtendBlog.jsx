@@ -7,24 +7,45 @@ import './ExtendBlog.scss'
 const ExtendBlog = () => {
   return (
     <div className='extend-blog'>
-      
-      <div className="img-on-top grid xl:grid-cols-4 md:grid-cols-4  sm:grid-cols-2 gap-3">
-        {dataInsideBlog.map((item, index) => {
-          return (
-            <div key={index} >
-              <img className='img-top' src={item.imgTheme} alt="" />
-            </div>
-          )
-        })}
+      <div className='extend-blog-img'>
+        <div><img src="https://dulichkhampha24.com/wp-content/uploads/2019/11/tiem-banh-coi-xay-gio-da-lat-4.jpg" alt="" /></div>
         
+        {/* <div className="img-on-top grid xl:grid-cols-4 col-span- md:grid-cols-4  sm:grid-cols-2 gap-3">
+          {dataInsideBlog.map((item, index) => {
+            return (
+              <div key={index} >
+                <img className='img-top' src={item.imgTheme} alt="" />
+              </div>
+            )
+          })}
+        </div> */}
+        
+        
+        <div className='img-top'>
+          <div>
+            <div><img src="https://khachsandalat.net/wp-content/uploads/2018/11/b%E1%BB%A9c-t%C6%B0%E1%BB%9Dng-v%C3%A0ng-t%E1%BA%A1i-c%E1%BB%91i-xay-gi%C3%B3.jpg" alt="" /></div>
+            <div><img src="https://khachsandalat.net/wp-content/uploads/2018/11/b%E1%BB%A9c-t%C6%B0%E1%BB%9Dng-v%C3%A0ng-t%E1%BA%A1i-c%E1%BB%91i-xay-gi%C3%B3.jpg" alt="" /></div>
+          </div>
+          <div>
+            <div><img src="https://khachsandalat.net/wp-content/uploads/2018/11/b%E1%BB%A9c-t%C6%B0%E1%BB%9Dng-v%C3%A0ng-t%E1%BA%A1i-c%E1%BB%91i-xay-gi%C3%B3.jpg" alt="" /></div>
+            <div><img src="https://khachsandalat.net/wp-content/uploads/2018/11/b%E1%BB%A9c-t%C6%B0%E1%BB%9Dng-v%C3%A0ng-t%E1%BA%A1i-c%E1%BB%91i-xay-gi%C3%B3.jpg" alt="" /></div>
+          </div>
+        </div>
+
+        <div><img src="https://idulich.vn/wp-content/uploads/2022/04/84958218_2501153626679297_7844026294926834733_n.jpg" alt="" /></div>
+        <div><img src="https://dulichkhampha24.com/wp-content/uploads/2019/11/tiem-banh-coi-xay-gio-da-lat.png" alt="" /></div>
       </div>
+
       
       <div className='extend-content'>
-        <div className="blur-frame">
-          <p>Review Tiệm Bánh Cối Xay Gió Nơi Check In Hoàn Hảo</p>
-          <div>
-            <i class="fa-solid fa-location-dot"></i>
-            <a className='location-blog' href="">9 Đường Tăng Bạt Hổ, Phường 1, Thành phố Đà Lạt, Lâm Đồng</a>
+        <div className='extend-content-top'>
+          <div className='extend-content-img'><img src="https://cafefcdn.com/203337114487263232/2021/7/14/photo-4-1626231295840218962594.jpg" alt="" /></div>
+          <div className="blur-frame">
+            <p>Review Tiệm Bánh Cối Xay Gió Nơi Check In Hoàn Hảo</p>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <a className='location-blog' href="">9 Đường Tăng Bạt Hổ, Phường 1, Thành phố Đà Lạt, Lâm Đồng</a>
+            </div>
           </div>
         </div>
 

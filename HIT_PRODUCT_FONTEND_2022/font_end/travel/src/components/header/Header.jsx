@@ -52,7 +52,8 @@ const Navbar = () => {
                                     <div className='icon-user mr-12 font-bold text-2xl flex mb-1' onClick={() => setShow(!show)} >  <i class="fa-solid fa-user"></i></div>
                                     {
                                         show && <>
-                                            <div className='absolute h-[65px] w-[110px] border-white bg-white  rounded-sm'>
+                                            <div className=' h-[110px] w-[110px] absolute border-white bg-white  rounded-sm'>
+                                                <h1 className=' px-4 py-1 border-b-2 cursor-pointer hover:bg-violet-100' > <Link className='text-black' to='/user'>Tài khoản</Link> </h1>
                                                 <h1 className=' px-4 py-1 border-b-2 cursor-pointer hover:bg-violet-100' onClick={handleLogoutSystem}>Đăng xuất</h1>
                                                 <h1 className='flex justify-center cursor-pointer hover:bg-violet-100'> <Link to='/changepass ' className='text-black'>Đổi mật khẩu</Link> </h1>
                                             </div></>
@@ -69,7 +70,7 @@ const Navbar = () => {
                                         </button>
                                     </Link>
                                     <Link to='/resgister'>
-                                        <button className='px-8 py-2 font-medium bg-blue-500 text-lg hover:ease-in  hover:duration-300'>Đăng ký</button>
+                                        <button className='px-8 py-2 font-medium bg-blue-500 text-lg hover:ease-in  hover:duration-300 border-none'>Đăng ký</button>
                                     </Link>
                                 </>
                         }

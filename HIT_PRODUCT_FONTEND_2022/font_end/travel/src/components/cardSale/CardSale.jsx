@@ -15,7 +15,7 @@ const Card = () => {
     const [arr, setArr] = useState([]);
 
     const fetchData = () => {
-        return axios.get("https://api-travell.herokuapp.com/api/v1/hotels")
+        return axios.get("https://api-travell.herokuapp.com/api/v1/rooms")
             .then((response) => {
                 // console.log(response.data);
                 setArr(response.data)
@@ -40,7 +40,7 @@ const Card = () => {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 },
@@ -62,7 +62,7 @@ const Card = () => {
             }
         ]
     };
-    console.log(dataBestSeller)
+    // console.log(dataBestSeller)
 
     return (
         <>
@@ -88,18 +88,18 @@ const Card = () => {
                                 <div className='carSale-bottom pl-2  '>
                                     <div className='flex '>
                                         <div className='mr-2 text-sm'><FontAwesomeIcon icon={faLocationDot} /></div>
-                                        <div><h3 className='text-sm'>{item.address}</h3></div>
+                                        <div><h3 className='text-sm font-semibold   '>{item.hotel.name}</h3></div>
 
                                     </div>
                                     <div className='flex'>
-                                        <button className='mr-1 mb-2 h-6 w-14 bg-slate-200 border-neutral-100 text-pink-400'><FontAwesomeIcon icon={faUmbrellaBeach} /> {item.point}</button>
-                                        <h4 className=''>{item.cmt}</h4>
+                                        <button className='mr-1 mb-2 h-6 w-14 bg-slate-200 text-[14px] border-neutral-100 text-pink-400'><FontAwesomeIcon icon={faUmbrellaBeach} /> {dataBestSeller[index].point}</button>
+                                        <h4 className='text-[16px]'>{dataBestSeller[index].cmt}</h4>
                                     </div>
-                                    <span className='bg-slate-200 text-sm border-neutral-100 rounded-sm text-blue-500'>{item.time}</span>
-                                    <div className='flex justify-between '>
-                                        <button className='mt-7 h-10 p-1 bg-orange-400 rounded-500 border-orange-400'>Đã bán: {item.bought}</button>
-                                        <div className='mr-4'>
-                                            <h3 className="justify-end line-through mt-5">{item.price}</h3>
+                                    <span className='bg-slate-200 text-sm border-neutral-100 rounded-sm text-blue-500'>{dataBestSeller[index].time}</span>
+                                    <div className='flex justify-between items-end '>
+                                        <button className='h-10 p-1  bg-blue-500 rounded-500  border-orange-400 border-none'>Đã đặt: {dataBestSeller[index].bought}</button>
+                                        <div className='mr-4 '>
+                                            <h3 className="justify-end line-through mt-5">{item.price}.đ</h3>
                                             <h1 className='flex justify-end text-lg font-medium text-pink-400'>???</h1>
                                         </div>
 
