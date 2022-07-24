@@ -12,14 +12,14 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Card = () => {
-    
+
     const [arr, setArr] = useState([]);
 
     const fetchData = () => {
         return axios.get("https://api-travell.herokuapp.com/api/v1/rooms")
             .then((response) => {
                 // console.log(response.data);
-                setArr(response.data)
+                setArr(response.data.slice(0, 10))
             })
     }
 

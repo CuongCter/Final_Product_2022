@@ -5,6 +5,9 @@ import { dataChooseAssess } from './dataChooseAssess'
 import { Link, useParams } from 'react-router-dom'
 import { dataBestSeller } from '../cardSale/data'
 import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUtensils, faWifi, faNoteSticky, faBoltLightning, faMoneyBill } from '@fortawesome/free-solid-svg-icons'
+
 const ChooseRom = () => {
   const { id } = useParams();
   useEffect(() => {
@@ -48,6 +51,9 @@ const ChooseRom = () => {
                     </div>
                   )
                 })}
+                {/* <div className="imgg mr-1">
+                      <img src={dataBestSeller.img} alt="" />
+                    </div> */}
               </div>
             </div>
             <div className="convenient">
@@ -87,22 +93,22 @@ const ChooseRom = () => {
               <div className="select">
                 <p>Lựa chọn 1</p>
                 <div className='icon-1'>
-                  <div className='icon-11'><i class="fa-duotone fa-mug-saucer"></i></div>
+                  <div className='icon-11'><FontAwesomeIcon icon={faUtensils} className='mr-5' /></div>
                   <p>Bữa sáng miễn phí</p></div>
                 <div className='icon-2'>
-                  <div className='icon-21'><i class="fa-thin fa-wifi"></i></div>
+                  <div className='icon-21'><FontAwesomeIcon icon={faWifi} className='mr-4' /></div>
                   <p>Wifi miễn phí</p></div>
                 <div className='icon-3'>
-                  <div className='icon-31'><i class="fa-regular fa-circle-exclamation"></i></div>
+                  <div className='icon-31'><FontAwesomeIcon icon={faNoteSticky} className='mr-4' /></div>
                   <p>Chính sách hành khách và trẻ em</p></div>
                 <div className='icon-4'>
-                  <div className='icon-41'><i class="fa-duotone fa-bolt-lightning"></i></div>
+                  <div className='icon-41'><FontAwesomeIcon icon={faBoltLightning} className='mr-5' /></div>
                   <p>Xác nhận nhanh</p></div>
                 <div className='icon-5'>
-                  <div className='icon-51'><i class="fa-regular fa-clock"></i></div>
+                  <div className='icon-51 mr-3'><i class="fa-regular fa-clock"></i></div>
                   <p>CHỈ TRONG 2 GIỜ!!! Mã <span className='sp'>MEGASALE</span> giảm thêm 5% đã được áp dụng, giảm 94.000đ. Giảm giá cực shock!</p></div>
                 <div className='icon-6'>
-                  <div className='icon-61'><i class="fa-solid fa-check"></i></div>
+                  <div className='icon-61 mr-3'><i class="fa-solid fa-check"></i></div>
                   <p>An tâm đặt phòng, HelloTravel hỗ trợ xuất hoá đơn nhanh chóng, tiết kiệm thời gian cho bạn.</p></div>
               </div>
               <div className="money">
