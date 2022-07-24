@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ChooseRoom.scss'
 import { dataChooseRoom } from './dataChooseRoom'
 import { dataChooseAssess } from './dataChooseAssess'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { dataBestSeller } from '../cardSale/data'
+import axios from 'axios'
 const ChooseRom = () => {
+  const { id } = useParams();
+  useEffect(() => {
+  }, []);
+
+  const [arr, setArr] = useState([]);
+
+  const fetchData = () => {
+    return axios.get(`https://api-travell.herokuapp.com/api/v1/rooms/${id}`)
+      .then((response) => {
+        // console.log(response.data);
+        setArr(response.data)
+      })
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
   return (
     <div id='chooseRoom'>
       <div>
@@ -46,7 +65,7 @@ const ChooseRom = () => {
           </div>
 
           <div className='container-right'>
-            <p>Premium Twin</p>
+            <p>{arr.name}</p>
             <div className="above">
               <div className='above-all'>
                 <div className='above-1' >
@@ -87,7 +106,7 @@ const ChooseRom = () => {
                   <p>An tâm đặt phòng, HelloTravel hỗ trợ xuất hoá đơn nhanh chóng, tiết kiệm thời gian cho bạn.</p></div>
               </div>
               <div className="money">
-                {dataChooseAssess.map((item, index) => {
+                {/* {dataChooseAssess.map((item, index) => {
                   return (
                     <div key={index}>
                       <div className='money-discount'> {item.moneyDiscount}</div>
@@ -95,15 +114,20 @@ const ChooseRom = () => {
                       <div className='money-new'>{item.moneNew}</div>
                     </div>
                   )
-                })}
+                })} */}
+                < div>
+                  <div className='money-discount '>-10%</div>
+                  <div className='money-old'>{arr.price}</div>
+                  <div className='money-new'>{arr.price}</div>
+                </div>
                 <p className='money-date'>/phòng/đêm</p>
                 <Link to='/bookRoom'><a className='bookRoom-btn' href="">Đặt phòng</a></Link>
 
               </div>
             </div>
             <div className='add-select'>
-            <a href="">Xem thêm lựa chọn</a>
-              
+              <a href="">Xem thêm lựa chọn</a>
+
 
             </div>
           </div>

@@ -1,4 +1,4 @@
-export const dataBestSeller = [
+export const dataBestSeller2 = [
     {
         id: 1,
         title: "Khách sạn Carevell",
@@ -323,17 +323,6 @@ export const dataBestSeller = [
     },
     {
         id: 30,
-        title: "Khách sạn Carevell",
-        location: "Sài Gòn",
-        price: "1.494.000",
-        linkImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lKB_gTZ2TJw8IWcx9nRn002oVJNg3bd3WQ&usqp=CAU",
-        point: "9.1",
-        cmt:"Tuyệt vời (54 đánh giá)",
-        time:"Vừa đặt cách đây 11 phút trước",
-        bought: "140"
-    },
-    {
-        id: 31,
         title: "Khách sạn Carevell",
         location: "Sài Gòn",
         price: "1.494.000",

@@ -2,6 +2,7 @@ import React from 'react'
 import './InfoLocation.scss'
 import { imgs } from '../assets/img'
 import { dataLocation } from './dataLocation'
+import { Link } from 'react-router-dom'
 const InfoLocation = () => {
     return (
         <div className='infoLocation '>
@@ -12,7 +13,10 @@ const InfoLocation = () => {
                         <h2 className='xl:text-base md:text-lg sm:text-xs'>Các địa điểm du lịch hàng đầu do HelloTravel đề xuất </h2>
                     </div>
                     <div className='infoLocation__content_header-btn '>
-                        <button className="px-5 py-2 mr-5 text-pink-400 back bg-white border-pink-400 ">Khám phá ngay</button>
+                        <Link to='location'>
+                            <button className="px-5 py-2 mr-5 text-pink-400 back bg-white border-pink-400 ">Khám phá ngay</button>
+                        </Link>
+
                     </div>
 
                 </div>

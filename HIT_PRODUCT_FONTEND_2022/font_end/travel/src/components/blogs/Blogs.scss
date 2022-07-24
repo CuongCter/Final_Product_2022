@@ -12,7 +12,7 @@
 
 .title {
   color: #000;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .desc-title {
@@ -25,6 +25,7 @@
   width: 586px;
   height: 380px;
   border-radius: 5px;
+  object-fit: fill;
 }
 
 .nav {
@@ -56,17 +57,19 @@
 }
 
 // Tablet
-@media only screen and (min-width: 46.25em) and (max-width:63.9375em){
+@media only screen and (min-width: 46.25em) and (max-width:63.9375em) {
   .container-blog {
     padding: 43px 30px 44px;
   }
-  
+
 }
+
 // Mobile
 @media only screen and (max-width: 46.1875em) {
   .container-blog {
-    padding: 43px 20px 44px ;
+    padding: 43px 20px 44px;
   }
+
   .title-right {
     text-align: center;
   }

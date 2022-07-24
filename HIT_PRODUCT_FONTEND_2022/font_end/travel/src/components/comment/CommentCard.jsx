@@ -49,16 +49,16 @@ const CommentCard = () => {
                     <div className='cardComment '>
                         <div className='cardComment-item pl-3 pr-1 ' >
                             <h1 className='font-bold text-4xl ml-3 '>"</h1>
-                            <div className='cardComment-item_cmt ml-3 mr-2 mb-5 font-medium'>{item.cmt}</div>
+                            <div className='cardComment-item_cmt ml-3 mr-2 mb-5 font-medium  h-[160px]'>{item.cmt}</div>
                             <div className='cardComment-item_cus flex justify-around '>
-                                <div>
-                                    <img src={item.linkImg} alt="" />
+                                <div >
+                                    <img className='rounded-[50%]' src={item.linkImg} alt="" />
                                 </div>
                                 <div className='cardComment-item_cus--info mt-12 '>
-                                    <h1 className='font-semibold mb-2'>{item.title}</h1>
+                                    <h1 className='font-bold mb-2'>{item.title}</h1>
                                     <Rating className=''
-                                        name="size-small" defaultValue={5} size="small" />
-                                    <h2>{item.work}</h2>
+                                        name="size-small" defaultValue={4} size="small" />
+                                    <h2 className='font-bold'>{item.work}</h2>
                                 </div>
                             </div>
                         </div>

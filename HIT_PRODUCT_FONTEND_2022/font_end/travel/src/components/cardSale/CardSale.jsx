@@ -9,9 +9,10 @@ import { imgs } from '../assets/img'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocation, faLocationDot, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 const Card = () => {
+    
     const [arr, setArr] = useState([]);
 
     const fetchData = () => {
@@ -62,7 +63,7 @@ const Card = () => {
             }
         ]
     };
-    // console.log(dataBestSeller)
+    console.log(dataBestSeller)
 
     return (
         <>
@@ -80,15 +81,18 @@ const Card = () => {
                                 <div className='cardSale-top '>
 
                                     <img src={dataBestSeller[index].linkImg} />
-                                    <h1 className='text-lg pl-2 font-semibold'>{item.name}</h1>
+                                    <div className=' h-[53px]'>
+                                        <h1 className='text-lg pl-2 font-semibold'>{item.name}</h1>
+                                    </div>
+
 
                                     <Rating className='pl-2'
                                         name="size-small" defaultValue={5} size="small" />
                                 </div>
                                 <div className='carSale-bottom pl-2  '>
-                                    <div className='flex '>
-                                        <div className='mr-2 text-sm'><FontAwesomeIcon icon={faLocationDot} /></div>
-                                        <div><h3 className='text-sm font-semibold   '>{item.hotel.name}</h3></div>
+                                    <div className='flex h-[40px]'>
+                                        <div className='mr-2 text-[17px]'><FontAwesomeIcon icon={faLocationDot} /></div>
+                                        <div><h3 className='text-[15px] font-semibold '>{item.hotel.name}</h3></div>
 
                                     </div>
                                     <div className='flex'>
@@ -99,7 +103,7 @@ const Card = () => {
                                     <div className='flex justify-between items-end '>
                                         <button className='h-10 p-1  bg-blue-500 rounded-500  border-orange-400 border-none'>Đã đặt: {dataBestSeller[index].bought}</button>
                                         <div className='mr-4 '>
-                                            <h3 className="justify-end line-through mt-5">{item.price}.đ</h3>
+                                            <h3 className="justify-end line-through mt-3">{item.price}.đ</h3>
                                             <h1 className='flex justify-end text-lg font-medium text-pink-400'>???</h1>
                                         </div>
 
@@ -113,7 +117,10 @@ const Card = () => {
                     }
                 </Slider>
                 <div className="text-center mt-7 text-xl ">
-                    <button className="px-4 py-2 mt-2 text-pink-400 back bg-pink-100 border-pink-400 hover:ease-in  hover:duration-300 hover:text-blue hover:bg-white">Xem thêm</button>
+                    <Link to='/services'>
+                        <button className="px-4 py-2 mt-2 text-pink-400 back bg-pink-100 border-pink-400 hover:ease-in  hover:duration-300 hover:text-blue hover:bg-white">Xem thêm</button>
+                    </Link>
+
                 </div>
 
             </div >

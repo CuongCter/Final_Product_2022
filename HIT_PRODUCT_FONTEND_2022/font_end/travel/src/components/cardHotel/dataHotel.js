@@ -7,7 +7,7 @@ export const dataHotel = [
         pay: "1.093.007đ",
         linkImg: "https://cdn2.vietnambooking.com/wp-content/uploads/hotel_pro/hotel_344561/f3795ba94ff3d49597049bf41dd0a419.jpg",
         point: "9.4",
-        cmt:"Tuyệt vời (104 đánh giá)",
+        cmt:"Tuyệt vời (10 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
     },
