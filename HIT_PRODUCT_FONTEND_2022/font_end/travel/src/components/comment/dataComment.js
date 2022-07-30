@@ -45,7 +45,7 @@ export const dataComment = [
         id: 7,
         cmt: "Khoảnh khắc khi bạn đến được cái đích của chuyến đi, nhìn ngắm mọi thứ xinh đẹp đang thu vào tầm mắt. Lúc đó bạn sẽ nhận ra mọi sự nỗ lực của mình là vô cùng xứng đáng.",
         linkImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Trung_Hieu_%28nghe_sy%29.jpg",
-        title: "Phạm Văn Cương",
+        title: "Trung Hiếu",
         work: "Artist"
     },
 ]

@@ -57,7 +57,7 @@ const CommentCard = () => {
                                 <div className='cardComment-item_cus--info mt-12 '>
                                     <h1 className='font-bold mb-2'>{item.title}</h1>
                                     <Rating className=''
-                                        name="size-small" defaultValue={4} size="small" />
+                                        name="size-small" defaultValue={5} size="small" />
                                     <h2 className='font-bold'>{item.work}</h2>
                                 </div>
                             </div>
@@ -66,8 +66,8 @@ const CommentCard = () => {
                     </div>
                 ))}
             </Slider>
-            <div className="text-center mt-12 text-xl ">
-                <button className="px-5 py-2 text-pink-400 back bg-white border-pink-400">Xem thêm</button>
+            <div className="text-center mt-10 text-xl ">
+                <button className="px-5 pt-1 py-2 text-pink-400 back bg-white border-pink-400 ">Xem thêm</button>
             </div>
 
         </div >

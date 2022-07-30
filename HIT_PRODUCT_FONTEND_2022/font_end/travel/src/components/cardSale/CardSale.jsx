@@ -81,8 +81,8 @@ const Card = () => {
                                 <div className='cardSale-top '>
 
                                     <img src={dataBestSeller[index].linkImg} />
-                                    <div className=' h-[53px]'>
-                                        <h1 className='text-lg pl-2 font-semibold'>{item.name}</h1>
+                                    <div className=' h-[53px] flex'>
+                                        <Link to={`/hotel/${item.id}`} className='text-black text-lg  font-semibold'>{item.name}</Link>
                                     </div>
 
 
@@ -92,7 +92,10 @@ const Card = () => {
                                 <div className='carSale-bottom pl-2  '>
                                     <div className='flex h-[40px]'>
                                         <div className='mr-2 text-[17px]'><FontAwesomeIcon icon={faLocationDot} /></div>
-                                        <div><h3 className='text-[15px] font-semibold '>{item.hotel.name}</h3></div>
+                                        <div>
+                                            {item.hotel.name}
+
+                                        </div>
 
                                     </div>
                                     <div className='flex'>

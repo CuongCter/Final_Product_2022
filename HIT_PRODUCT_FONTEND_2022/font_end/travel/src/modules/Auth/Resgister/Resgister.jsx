@@ -11,13 +11,23 @@ import axios from 'axios';
 import { API } from '../const/const.api';
 
 
-const validate = values => {
+const validate = (values) => {
     const errors = {};
-    if (!values.password) {
-        errors.email = 'Required';
-    } else if (!/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/) {
-        errors.password = 'Invalid password';
-    }
+    // if (!values.userName) {
+    //     errors.userName = "Vui lòng nhập tên người dùng ";
+    // } else if (values.userName.length < 8) {
+    //     errors.userName = "Tên tài khoản ít nhất 8 ký tự!";
+    // }
+    // if (!values.password) {
+    //     errors.password = "Vui lòng nhập mật khẩu";
+    // } else if (
+    //     !/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(
+    //         values.password
+    //     )
+    // ) {
+    //     errors.password =
+    //         "Mật khẩu phải chứa ít nhất 8 ký tự, 1 ký tự in Hoa, 1 ký tự đặc biệt, 1 ký tự số";
+    // }
     if (!values.email) {
         errors.email = 'Required';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -36,6 +46,7 @@ const Resgister = () => {
             fullName: '',
             email: '',
             phoneNumber: '',
+            address: ''
 
         },
         validate,
@@ -59,6 +70,7 @@ const Resgister = () => {
                         fullName: values.fullName,
                         email: values.email,
                         phoneNumber: values.phoneNumber,
+                        address: values.address
                     })
 
                     if (result.status === 200) {
@@ -113,6 +125,7 @@ const Resgister = () => {
                                     value={formik.values.password}
                                     className='inputSignup'
                                     placeholder='Nhập mật khẩu'
+
                                 />
                                 {formik.errors.password ? <div>{formik.errors.password}</div> : null}
                                 <br />
@@ -145,6 +158,16 @@ const Resgister = () => {
                                     placeholder='Email'
 
                                 />
+                                <input
+                                    id="address"
+                                    name="address"
+                                    type="text"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.address}
+                                    className='inputSignup'
+                                    placeholder='Địa chỉ'
+
+                                />
 
                                 <input
                                     id="phoneNumber"
@@ -157,7 +180,7 @@ const Resgister = () => {
                                 />
 
                                 <br />
-                                <br />
+
                                 <button className='hover:ease-in  hover:duration-300 btn-signup bg-[#FC5981] hover:bg-[#9ec0e2] hover:text-black ' type="submit">Đăng ký</button>
                             </form>
                         </div>

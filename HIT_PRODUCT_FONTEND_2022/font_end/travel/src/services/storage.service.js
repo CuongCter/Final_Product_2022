@@ -4,6 +4,7 @@ class StorageService {
   constructor() {
     this.localStorage = window.localStorage;
     this.sessionStorage = window.sessionStorage;
+    
   }
 
   // localStorage

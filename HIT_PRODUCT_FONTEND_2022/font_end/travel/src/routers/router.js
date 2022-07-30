@@ -34,11 +34,11 @@ const publicRoutes = [
     { path: '/contact', component: Contact},
     { path: '/services', component: Services},
     { path: '/location2', component: Location2},
-    { path: '/user', component: User },
-    { path: '/user2', component: UserRoom },
-    { path: '/user3', component: UserPosts},
-    { path: '/user4', component: UserAssess },
-    { path: '/user5', component: UserPromotion},
+    { path: '/user/:id', component: User },
+    { path: '/user2/:id', component: UserRoom },
+    { path: '/user3/:id', component: UserPosts},
+    { path: '/user4/:id', component: UserAssess },
+    { path: '/user5/:id', component: UserPromotion},
 ]; 
 
 

@@ -74,7 +74,7 @@ const CardHotel = () => {
                                 <div className='cardHotel-top '>
                                     <button className='mt-2 ml-2 absolute w-13 bg-pink-400 border-pink-400'>-29%</button>
                                     <img src={dataHotel[index].linkImg} />
-                                    <div className=' h-[55px]'>
+                                    <div className=' h-[55px] flex'>
                                         <Link to={`/hotel/${item.id}`} className='text-black text-lg pl-2 font-semibold'>
                                             {item.name}
                                         </Link>

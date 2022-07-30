@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { animateScroll as scroll, } from 'react-scroll'
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import './Header.scss'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { dataHeader } from './dataHeader';
 import storageService from '../../services/storage.service';
-
+import axios from 'axios';
+import { useEffect } from 'react';
+import { API } from '../../modules/Auth/const/const.api'
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
@@ -24,10 +26,49 @@ const Navbar = () => {
         }
     }
 
+
+
+    const idUser = storageService.get('id')
+    // console.log(idUser);
+    const handleUser = () => {
+        navigate(`/user/${idUser}`)
+    }
     // const isLogin = storageService.getItem('isLogin')
     const isLogin = storageService.get('isLogin')
     // console.log(isLogin);
     const [show, setShow] = useState(false)
+
+    // const { id } = useParams();
+    // useEffect(() => {
+    //     console.log(id);
+
+    // }, []);
+
+    const [user, setUser] = useState([]);
+    const fetchUser = () => {
+        return axios.get(`https://api-travell.herokuapp.com/api/v1/users/${idUser}`)
+            .then((response) => {
+                // console.log(response.data);
+                setUser(response.data)
+            })
+    }
+
+    useEffect(() => {
+        fetchUser()
+    }, [])
+
+    // const [cus, setCus] = useState([]);
+    // const fetchCus = () => {
+    //     return axios.get(`https://api-travell.herokuapp.com/api/v1/users/${user.id}`)
+    //         .then((response) => {
+    //             // console.log(response.data);
+    //             setUser(response.data)
+    //         })
+    // }
+    // useEffect(() => {
+    //     fetchCus()
+    // }, [])
+    // console.log(user.id);
     return (
         <div className='header'>
             {/* <div>
@@ -53,7 +94,7 @@ const Navbar = () => {
                                     {
                                         show && <>
                                             <div className=' h-[110px] w-[110px] absolute border-white bg-white  rounded-sm'>
-                                                <h1 className=' px-4 py-1 border-b-2 cursor-pointer hover:bg-violet-100' > <Link className='text-black' to='/user'>Tài khoản</Link> </h1>
+                                                <h1 className=' px-4 py-1 border-b-2 cursor-pointer hover:bg-violet-100' onClick={handleUser}>Tài khoản</h1>
                                                 <h1 className=' px-4 py-1 border-b-2 cursor-pointer hover:bg-violet-100' onClick={handleLogoutSystem}>Đăng xuất</h1>
                                                 <h1 className='flex justify-center cursor-pointer hover:bg-violet-100'> <Link to='/changepass ' className='text-black'>Đổi mật khẩu</Link> </h1>
                                             </div></>

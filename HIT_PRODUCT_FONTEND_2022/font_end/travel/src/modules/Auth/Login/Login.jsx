@@ -9,6 +9,7 @@ import { useFormik } from 'formik';
 import axios from 'axios'
 import { API } from '../const/const.api'
 import storageService from '../../../services/storage.service'
+import { id } from 'date-fns/locale'
 const Login = () => {
     const navigate = useNavigate();
     const clientId = '36536591056-nqetopeqi2e466uk4ujl7dh8e73m9n73.apps.googleusercontent.com'
@@ -46,6 +47,11 @@ const Login = () => {
                     navigate('/')
                     storageService.set("accessToken", resData.data.jwt)
                     storageService.set('isLogin', true)
+                    storageService.set('username', resData.data.username)
+                    storageService.set('id', resData.data.id)
+                    // storageService.set('fullName', resData.data.fullName)
+                    // storageService.set('email', resData.data.email)
+                    // storageService.set('phoneNumber', resData.data.phoneNumber)
                 }
             } catch (err) {
                 console.log(err)

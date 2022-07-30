@@ -26,6 +26,19 @@ const ChooseRom = () => {
   useEffect(() => {
     fetchData()
   }, [])
+  const [hotel, setHotel] = useState([]);
+
+  const fetchHotel = () => {
+    return axios.get(`https://api-travell.herokuapp.com/api/v1/hotels/${id}`)
+      .then((response) => {
+        // console.log(response.data);
+        setHotel(response.data)
+      })
+  }
+
+  useEffect(() => {
+    fetchHotel()
+  }, [])
   return (
     <div id='chooseRoom'>
       <div>
@@ -71,7 +84,7 @@ const ChooseRom = () => {
           </div>
 
           <div className='container-right'>
-            <p>{arr.name}</p>
+            <h className='mb-2 text-[20px] font-semibold'>{arr.name}</h>
             <div className="above">
               <div className='above-all'>
                 <div className='above-1' >
