@@ -52,7 +52,7 @@ const SeeHotel = () => {
 
               </div>
               <div >
-                <a className='choose' href="#chooseRoom">Chọn Phòng</a>
+                <button className='choose' href="#chooseRoom">Chọn Phòng</button>
               </div>
             </div>
           </div>

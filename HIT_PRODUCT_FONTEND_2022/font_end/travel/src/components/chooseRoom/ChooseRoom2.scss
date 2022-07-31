@@ -1,0 +1,101 @@
+.room {
+    width: 1188px;
+    height: 510px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+
+    &-pic {
+        height: 100%;
+        width: 23%;
+        padding: 24px 24px 0 24px;
+
+        &__img {
+            width: 206px;
+            height: 150px;
+            border-radius: 5px;
+
+            img {
+                width: 206px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+
+        &__list {
+            display: flex;
+
+            &_i {
+                margin: 2px;
+                height: 50px;
+                width: 65px;
+                background-color: black;
+
+                img {
+                    margin: 2px;
+                    height: 50px;
+                    width: 65px;
+                }
+            }
+        }
+
+        &__exten {
+            display: flex;
+            flex-wrap: wrap;
+
+            &_item {
+                background-color: rgb(214, 208, 208);
+                margin: 3px;
+                padding: 2px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &-info {
+        height: 100%;
+        width: 77%;
+        padding-right: 30px;
+
+        &__head {
+            border-bottom: 0.5px solid rgb(198, 192, 192);
+            padding-bottom: 10px;
+
+            &_icon {
+                display: flex;
+
+                &-per {
+                    margin-right: 20px;
+                }
+
+                &-bed {
+                    margin-right: 20px;
+                }
+            }
+
+
+        }
+
+        &__main {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 0.5px solid rgb(188, 182, 182);
+
+            &_services {
+                width: 50%;
+                border-right: 0.5px solid rgb(199, 195, 195);
+                height: 350px;
+            }
+
+            &_book {
+                height: 350px;
+                width: 50%;
+                display: flex;
+                text-align: end;
+                flex-direction: column;
+
+            }
+        }
+    }
+
+}

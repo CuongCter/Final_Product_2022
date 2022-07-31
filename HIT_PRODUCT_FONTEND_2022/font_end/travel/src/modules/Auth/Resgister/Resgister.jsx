@@ -125,6 +125,7 @@ const Resgister = () => {
                                     value={formik.values.password}
                                     className='inputSignup'
                                     placeholder='Nhập mật khẩu'
+                                    onBlur={formik.handleBlur}
 
                                 />
                                 {formik.errors.password ? <div>{formik.errors.password}</div> : null}
