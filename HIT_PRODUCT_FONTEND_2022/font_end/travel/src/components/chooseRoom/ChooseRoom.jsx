@@ -173,7 +173,7 @@ const ChooseRom = () => {
           <div className='room'>
             <div className='room-pic'>
               <div className='room-pic__img'>
-                <img src={img[index].linkImg} alt="" />
+                <img src="" alt="" />
               </div>
               <div className='room-pic__list'>
                 <div className='room-pic__list_i'>
