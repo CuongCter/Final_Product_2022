@@ -119,4 +119,16 @@ export const dataHotel = [
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
     },
+    {
+        id: 11,
+        title: "Khách Sạn Ibis Styles Vũng Tàu",
+        location: "Thành phố Vũng Tàu",
+        price: "1.519.384đ",
+        pay: "1.093.007đ",
+        linkImg: "https://pix10.agoda.net/hotelImages/6125338/-1/b43154d83416b08dd64e4810907914f0.jpg?ca=8&ce=1&s=1024x768",
+        point: "9.4",
+        cmt:"Tuyệt vời (104 đánh giá)",
+        time:"Vừa đặt cách đây 14 giờ",
+        bought: "0"
+    },
 ]
