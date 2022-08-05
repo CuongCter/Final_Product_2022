@@ -19,7 +19,6 @@
 
         img {
             border-radius: 10px;
-
             object-fit: cover;
         }
 
@@ -33,7 +32,7 @@
 
         &__date {
             width: 684px;
-            height: 321px;
+            height: 350px;
             background-color: white;
             margin-bottom: 12px;
             border-radius: 5px;
@@ -69,15 +68,15 @@
         margin-left: 12px;
 
         &__element {
-            width: 480px;
-            height: 511px;
+            width: 510px;
+            height: 542px;
             background-color: white;
             margin-bottom: 12px;
             border-radius: 5px;
             padding: 24px;
 
             img {
-                width: 432px;
+                width: 480px;
                 height: 114px;
                 object-fit: cover;
                 border-radius: 5px;
@@ -85,7 +84,7 @@
         }
 
         &__buy {
-            width: 480px;
+            width: 510px;
             height: 199px;
             background-color: white;
             border-radius: 5px;

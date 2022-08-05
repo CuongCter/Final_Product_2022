@@ -12,8 +12,8 @@ const Blogs = () => {
         <div className="cols-span-1">
 
           <div className="general-news">
-            <img className='img-left' src="https://nld.mediacdn.vn/291774122806476800/2021/5/15/camtrainld4-16210408309941307225501.jpg" alt="" />
-            <b className='nav'>Top 5 Điểm Cắm Trại Quanh Hà Nội Siêu Hấp Dẫn Phải Rủ “Cạ Cứng” Đi Ngay</b>
+            <img className='img-left' src="https://motortrip.vn/wp-content/uploads/2021/10/cam-trai-da-lat-4-1.jpg" alt="" />
+            <b className='nav'>Top 12 khu cắm trại Đà Lạt có tọa độ săn mây tuyệt đỉnh</b>
           </div>
         </div>
 

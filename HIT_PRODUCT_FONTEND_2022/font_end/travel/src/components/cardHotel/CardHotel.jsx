@@ -63,19 +63,18 @@ const CardHotel = () => {
         <>
             <div className='slickHotel xl:pl-32 xl:pr-32'>
                 <div className='slickHotel_title'>
-                    <h1 className='text-2xl pt-1 font-medium '>Khách sạn đang thịnh hành</h1>
+                    <h1 className='text-3xl pt-1 font-bold '>Khách sạn đang thịnh hành</h1>
                     <h2 className='mt-1 mb-2 font-normal text-base'>Các khách sạn được tìm kiếm & đặt nhiều nhất do HelloTravelHelloTravel đề xuất</h2>
                 </div>
 
                 <Slider {...settings} >
                     {hotel && hotel.map((item, index) => (
                         <div className='cardHotel'>
-                            <div className='cardHotel-item  '>
+                            <div className='cardHotel-item '>
                                 <div className='cardHotel-top '>
-                                    <button className='mt-2 ml-2 absolute w-13 bg-pink-400 border-pink-400'>-29%</button>
                                     <img src={dataHotel[index].linkImg} />
                                     <div className=' h-[55px] flex'>
-                                        <Link to={`/hotel/${item.id}`} className='text-black text-lg pl-2 font-semibold'>
+                                        <Link to={`/hotel/${item.id}`} className='text-black text-lg pl-2 font-bold hover:ease-in  hover:duration-300 hover:text-blue-400'>
                                             {item.name}
                                         </Link>
                                     </div>
@@ -98,10 +97,10 @@ const CardHotel = () => {
                                     <div>
                                         <div className=' flex justify-between border-dashed border-2 rounded-md border-slate-200  p-1 mr-2 mt-7'>
                                             <div>
-                                                <h2 className='text-sm'>Mã: <span className='text-sm text-blue-400'>DONNHE <button className='bg-blue-500 w-10 border-none'>-5%</button></span></h2>
+                                                <h2 className='text-sm'>Mã: <span className='text-sm text-blue-400'>DONNHE <span className='bg-blue-500 w-10 border-none text-white px-2 py-0.5 rounded-[5px]'>-5%</span></span></h2>
                                             </div>
                                             <div>
-                                                <h1 className='font-medium text-lg text-pink-400 '>{dataHotel[index].pay}</h1>
+                                                {/* <h1 className='font-medium text-lg text-pink-400 '>{dataHotel[index].pay}</h1> */}
                                             </div>
                                         </div>
                                     </div>

@@ -30,7 +30,7 @@ const publicRoutes = [
     { path: '/blog', component: Blog },
     { path: '/insideBlog', component: InsideBlog},
     { path: '/blog', component: Blog},
-    { path: '/bookRoom', component: PickRoom},
+    { path: '/bookRoom/:id', component: PickRoom},
     { path: '/contact', component: Contact},
     { path: '/services', component: Services},
     { path: '/location2', component: Location2},

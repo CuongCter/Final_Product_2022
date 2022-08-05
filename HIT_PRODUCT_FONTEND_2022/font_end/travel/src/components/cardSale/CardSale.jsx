@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocation, faLocationDot, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import numberWithCommas from '../../utils/number'
 
 const Card = () => {
 
@@ -77,12 +78,12 @@ const Card = () => {
                     {arr && arr.map((item, index) => (
 
                         <div className='cardSale'>
-                            <div className='cardSale-item '>
+                            <div className='cardSale-item  '>
                                 <div className='cardSale-top '>
 
                                     <img src={dataBestSeller[index].linkImg} />
-                                    <div className=' h-[53px] flex'>
-                                        <Link to={`/hotel/${item.id}`} className='text-black text-lg  font-semibold'>{item.name}</Link>
+                                    <div className=' h-[53px] flex '>
+                                        <Link to={`/hotel/${item.hotel.id}`} className='text-black text-lg hover:ease-in  hover:duration-300 hover:text-blue-400 font-bold'>{item.name}</Link>
                                     </div>
 
 
@@ -104,9 +105,9 @@ const Card = () => {
                                     </div>
                                     <span className='bg-slate-200 text-sm border-neutral-100 rounded-sm text-blue-500'>{dataBestSeller[index].time}</span>
                                     <div className='flex justify-between items-end '>
-                                        <button className='h-10 p-1  bg-blue-500 rounded-500  border-orange-400 border-none'>Đã đặt: {dataBestSeller[index].bought}</button>
+                                        <button className='h-[38px] w-[98px] p-1  bg-blue-500 rounded-500 text-[16px] font-semibold  border-none'>Đã đặt: {dataBestSeller[index].bought}</button>
                                         <div className='mr-4 '>
-                                            <h3 className="justify-end line-through mt-3">{item.price}.đ</h3>
+                                            <h3 className="justify-end line-through mt-3">{numberWithCommas(item.price)}.đ</h3>
                                             <h1 className='flex justify-end text-lg font-medium text-pink-400'>???</h1>
                                         </div>
 
@@ -121,7 +122,7 @@ const Card = () => {
                 </Slider>
                 <div className="text-center mt-7 text-xl ">
                     <Link to='/services'>
-                        <button className="px-4 py-2 mt-2 text-pink-400 back bg-pink-100 border-pink-400 hover:ease-in  hover:duration-300 hover:text-blue hover:bg-white">Xem thêm</button>
+                        <button className="px-4 pb-1 h-[40px] mt-2 text-pink-400 back bg-pink-100 border-pink-400 hover:ease-in  hover:duration-300 hover:text-blue hover:bg-white">Xem thêm</button>
                     </Link>
 
                 </div>

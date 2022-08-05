@@ -29,7 +29,7 @@ const ChooseRom = () => {
     fetchHotel()
   }, [])
   const [arr, setArr] = useState([]);
-  let a = 4 * (id - 1)
+  let a = 3 * (id - 1)
   let b = a + 3
   const fetchData = () => {
     return axios.get(`https://api-travell.herokuapp.com/api/v1/rooms/`)
@@ -56,6 +56,7 @@ const ChooseRom = () => {
   useEffect(() => {
     fetchImg()
   }, [])
+
   return (
     <div id='chooseRoom'>
       <div>
@@ -170,20 +171,21 @@ const ChooseRom = () => {
 
         </div> */}
         {arr && arr.map((item, index) => (
+
           <div className='room'>
             <div className='room-pic'>
               <div className='room-pic__img'>
-                <img src="" alt="" />
+                <img src={dataBestSeller[index + a].linkImg} alt="" />
               </div>
               <div className='room-pic__list'>
                 <div className='room-pic__list_i'>
-                  <img src="" alt="" />
+                  <img src={dataBestSeller[index + a].linkImg} alt="" />
                 </div>
                 <div className='room-pic__list_i'>
-                  <img src="" alt="" />
+                  <img src={dataBestSeller[index + a].linkImg} alt="" />
                 </div>
                 <div className='room-pic__list_i'>
-                  <img src="" alt="" />
+                  <img src={dataBestSeller[index + a].linkImg} alt="" />
                 </div>
               </div>
               <div className='mt-[16px]'>
@@ -211,11 +213,11 @@ const ChooseRom = () => {
               <div className='room-info__head'>
                 <h1 className='font-bold mt-2 mb-2 text-[20px]'>{item.name}</h1>
                 <div className='room-info__head_icon'>
-                  <div className='room-info__head_icon-per' >
-                    <FontAwesomeIcon icon={faUserGroup} /> Sức chứa tối đa: 3 người
+                  <div className='room-info__head_icon-per w-[50%]' >
+                    <FontAwesomeIcon icon={faUserGroup} /> {item.description}
                   </div>
                   <div className='room-info__head_icon-bed' >
-                    <FontAwesomeIcon icon={faBed} /> Hai giường đơn
+                    <FontAwesomeIcon icon={faBed} /> {item.type}
                   </div>
                   <div className='room-info__head_icon-view' >
                     <FontAwesomeIcon icon={faLocationDot} /> Tầm nhìn hướng biến
@@ -239,7 +241,7 @@ const ChooseRom = () => {
                     <p>Xác nhận nhanh</p></div>
                   <div className='icon-5 mt-2'>
                     <div className='icon-51 mr-3'><i class="fa-regular fa-clock"></i></div>
-                    <p>CHỈ TRONG 2 GIỜ!!! Mã <span className='sp'>MEGASALE</span> giảm thêm 5% đã được áp dụng, giảm 94.000đ. Giảm giá cực shock!</p></div>
+                    <p>CHỈ TRONG 2 GIỜ!!! Mã <span className='sp'>MEGASALE</span> giảm thêm 5% đã được áp dụng. Giảm giá cực shock!</p></div>
                   <div className='icon-6 mt-2'>
                     <div className='icon-61 mr-3'><i class="fa-solid fa-check"></i></div>
                     <p>An tâm đặt phòng, HelloTravel hỗ trợ xuất hoá đơn nhanh chóng, tiết kiệm thời gian cho bạn.</p></div>
@@ -247,19 +249,17 @@ const ChooseRom = () => {
                 <div className='room-info__main_book'>
                   <div className='mt-[55px]'>
                     <span className='bg-pink-500 rounded-lg px-2 py-1 text-white'>-10%</span>
-                    <h2 className='mt-1 line-through'>1</h2>
-                    <h1 className='font-bold'>1</h1>
+                    <h2 className='mt-1 line-through'>{numberWithCommas(item.price)}</h2>
+                    <h1 className='font-bold'>{numberWithCommas(item.price * 0.9)}</h1>
                     <h1>/phòng/đêm</h1>
-                    <Link to='/bookRoom'>
+                    <Link to={`/bookRoom/${item.id}`}>
                       <button className='bg-pink-500 mt-2 rounded-lg border-none px-4 py-2 hover:ease-in  hover:duration-200'>Đặt phòng</button>
                     </Link>
                   </div>
                 </div>
               </div>
               <div className='room-info__foot'>
-                <div className='add-select'>
-                  <a href="">Xem thêm lựa chọn</a>
-                </div>
+
               </div>
             </div>
           </div>

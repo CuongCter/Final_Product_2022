@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
 import { dataComment } from './dataComment';
 import { Stack, Rating } from '@mui/material'
+import { Link } from 'react-router-dom';
 const CommentCard = () => {
     const settings = {
         dots: true,
@@ -67,7 +68,10 @@ const CommentCard = () => {
                 ))}
             </Slider>
             <div className="text-center mt-10 text-xl ">
-                <button className="px-5 pt-1 py-2 text-pink-400 back bg-white border-pink-400 ">Xem thêm</button>
+                <Link to='/blog'>
+                    <button className="px-5 pt-1 py-2 text-pink-400 back bg-white border-pink-400 ">Xem thêm</button>
+                </Link>
+
             </div>
 
         </div >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './BookRoom.scss'
 import { DateRange } from 'react-date-range'
 import 'react-date-range/dist/styles.css'; // main css file
@@ -6,8 +6,25 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { Stack, Rating } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faBedPulse, faBoltLightning, faLocation, faLocationDot, faMoneyBill, faNotEqual, faNoteSticky, faUmbrellaBeach, faUserGroup, faUtensils, faWifi } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import { dataBestSeller } from '../cardSale/data';
 const BookRoom = () => {
+    const { id } = useParams();
+    useEffect(() => {
+    }, []);
+    const [arr, setArr] = useState([]);
+    const fetchData = () => {
+        return axios.get(`https://api-travell.herokuapp.com/api/v1/rooms/${id}`)
+            .then((response) => {
+                // console.log(response.data);
+                setArr(response.data)
+            })
+    }
 
+    useEffect(() => {
+        fetchData()
+    }, [])
     return (
         <div>
             <div className='containerBookRoom'>
@@ -15,10 +32,10 @@ const BookRoom = () => {
                     <div className='bookRoom_put'>
                         <div className='bookRoom_put__title flex pl-[24px] pt-[24px]'>
                             <div className='mr-4'>
-                                <img src="http://pxphoto.com/files/pxphoto.com/images/slides/hotel-slide-img%20(1).jpg  " alt="" className='w-[109px] h-[112px] ' />
+                                <img src={dataBestSeller[id].linkImg} alt="" className='w-[112px] h-[112px] ' />
                             </div>
                             <div>
-                                <h1 className='font-bold'>Khách Sạn Ibis Styles Vũng Tàu</h1>
+                                <h1 className='font-bold text-[24px]'>{arr.name}</h1>
                                 <Rating className='pl-2'
                                     name="size-small" defaultValue={5} size="small" />
                                 <div className='flex'>
@@ -63,20 +80,20 @@ const BookRoom = () => {
                         <div className='bookRoom_info__element'>
                             <div>
                                 <h1 className='bg-[#FC5981] w-[110px] pl-2 rounded absolute'>Giảm giá 10%</h1>
-                                <img src="http://pxphoto.com/files/pxphoto.com/images/slides/hotel-slide-img%20(1).jpg" alt="" />
+                                <img src={dataBestSeller[id].linkImg} alt="" />
                             </div>
-                            <h1 className='font-bold mb-3 mt-5'>Premium Twin</h1>
-                            <div className='flex'>
-                                <h1 className='mr-10'><FontAwesomeIcon icon={faUserGroup} className='mr-3' />Sức chứa tối đa: 3 người</h1>
-                                <h1> <FontAwesomeIcon icon={faLocationDot} className=' font-semibold pr-1' />Hướng biển</h1>
+                            <h1 className='font-bold mb-3 mt-5 text-[20px]'>{arr.name}</h1>
+                            <div className='flex mb-4'>
+                                <h1 className='mr-5'><FontAwesomeIcon icon={faUserGroup} className='mr-1' />{arr.description}</h1>
+                                <h1> <FontAwesomeIcon icon={faLocationDot} className='font-semibold ' />Hướng biển</h1>
                             </div>
-                            <h1><FontAwesomeIcon icon={faBed} className='mr-3' />Hai giường đơn</h1>
+                            <h1><FontAwesomeIcon icon={faBed} className='mr-3' />{arr.type}</h1>
                             <h1 className='text-green-500'><FontAwesomeIcon icon={faUtensils} className='mr-5' />Bữa sáng miễn phí</h1>
                             <h1 className='text-green-500'><FontAwesomeIcon icon={faWifi} className='mr-4' />Wifi miễn phí</h1>
                             <h1><FontAwesomeIcon icon={faNoteSticky} className='mr-4' />Chính sách cho khách hàng và trẻ em</h1>
                             <h1 className='text-yellow-500'><FontAwesomeIcon icon={faBoltLightning} className='mr-5' />Xác nhận nhanh</h1>
                             <h1 className='text-green-500'><FontAwesomeIcon icon={faMoneyBill} className='mr-3' />Mã MEGASALE giảm thêm 5% đã được áp dụng</h1>
-                            <div className='mt-12 w-[432px] h-[55px] text-[#FC5981] bg-pink-100 pl-[26px] pr-[26px] text-sm pt-1'>Đừng bỏ lỡ! Chúng tôi chỉ còn 2 phòng có giá này. Hãy đặt ngay!</div>
+                            <div className='mt-7 w-[432px] h-[55px] text-[#FC5981] bg-pink-100 pl-[26px] pr-[26px] text-sm pt-1'>Đừng bỏ lỡ! Chúng tôi chỉ còn 2 phòng có giá này. Hãy đặt ngay!</div>
                         </div>
                         <div className='bookRoom_info__buy'>
                             <div className='flex justify-between border-b-[2px]'>

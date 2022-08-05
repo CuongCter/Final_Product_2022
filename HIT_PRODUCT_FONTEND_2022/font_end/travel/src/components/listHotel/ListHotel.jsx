@@ -80,8 +80,11 @@ const ListHotel = () => {
                                     <div className='cardList-top '>
                                         <button className='mt-2 ml-2 absolute w-14 bg-pink-400 border-pink-400'>{dataList[index].promotion}</button>
                                         <img src={dataList[index].linkImg} />
-                                        <div className='h-[46px]'>
-                                            <h1 className='text-[18px] pl-2 font-bold'>{item.name}</h1>
+                                        <div className='h-[46px] flex '>
+                                            <Link to={`/hotel/${item.id}`} className='text-black text-lg pl-2 font-bold hover:ease-in  hover:duration-300 hover:text-blue-400'>
+                                                {item.name}
+                                            </Link>
+
                                         </div>
 
 
@@ -92,7 +95,7 @@ const ListHotel = () => {
                                         <div className='flex mb-2 h-[50px] justify-between'>
                                             <div className='flex'>
                                                 <div className=''><FontAwesomeIcon className='text-sm' icon={faLocationDot} /></div>
-                                                <div><h3 className='text-[16px] mr-1'>{item.location.address}</h3></div>
+                                                <div className=' w-[170px]'><h3 className='text-[16px] mr-1'>{item.location.address}</h3></div>
                                             </div>
                                             <div className='pr-2'>
                                                 <button className=' text-sm bg-white text-pink-500 border-pink-400 p-1'>Nghỉ dưỡng</button>
