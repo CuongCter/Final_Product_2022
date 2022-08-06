@@ -9,6 +9,7 @@ import { faBed, faBedPulse, faBoltLightning, faLocation, faLocationDot, faMoneyB
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { dataBestSeller } from '../cardSale/data';
+import numberWithCommas from '../../utils/number'
 const BookRoom = () => {
     const { id } = useParams();
     useEffect(() => {
@@ -101,14 +102,14 @@ const BookRoom = () => {
                                 <div>
                                     <div className='flex'>
                                         <h1 className='bg-[#FC5981] pl-1 pr-1 rounded mr-2'>-10%</h1>
-                                        <h1 className='line-through '>1.708.101đ</h1>
+                                        <h1 className='line-through '>{numberWithCommas(arr.price)}</h1>
                                     </div>
-                                    <h1 className='font-bold flex-e grid justify-items-end'>1.544.096đ</h1>
+                                    <h1 className='font-bold flex-e grid justify-items-end'>{numberWithCommas(arr.price * 0.9)}</h1>
                                 </div>
                             </div>
                             <div className='flex justify-between py-3 border-b-[2px]'>
                                 <h1>Thuế và phí dịch vụ khách sạn</h1>
-                                <h1>232.533đ</h1>
+                                <h1>253.533đ</h1>
                             </div>
                             <div className='flex justify-between pt-2 '>
                                 <div>
