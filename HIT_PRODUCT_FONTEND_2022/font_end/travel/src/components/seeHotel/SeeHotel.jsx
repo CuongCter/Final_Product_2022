@@ -51,8 +51,8 @@ const SeeHotel = () => {
                 <p className='price-new'>1.093.007đ</p>
 
               </div>
-              <div >
-                <button className='choose' href="#chooseRoom">Chọn Phòng</button>
+              <div className='mt-2'>
+                <a className='choose' href="#chooseRoom">Chọn Phòng</a>
               </div>
             </div>
           </div>

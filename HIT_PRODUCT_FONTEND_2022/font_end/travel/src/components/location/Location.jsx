@@ -6,10 +6,10 @@ import { dataLocation } from './dataLocation'
 import './Location.scss'
 
 const Location = () => {
-  
+
   return (
     <div>
-      <img className='img-joint' src="https://vcdn-dulich.vnecdn.net/2022/02/26/Sun-World-Ba-Na-Hills-10-7665-1645841708.jpg" alt="" />
+      <img className='img-joint' src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2017/10/26015647/dich-vu-thiet-ke-banner-du-lich-chuyen-nghiep-tai-ha-noi4.jpg" alt="" />
 
       <div className="news-posts">
         <p className="theme-name ">Những bài viết mới nhất</p>

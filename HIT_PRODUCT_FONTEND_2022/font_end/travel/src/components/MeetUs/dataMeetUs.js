@@ -12,7 +12,7 @@ export const dataUserMeetUs = [
   {
      id: '2',
      imgCover: 'https://meta.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg',
-     imgAvt: 'https://anhdep123.com/wp-content/uploads/2021/05/hinh-avatar-trang.jpg',
+     imgAvt: imgs.imgQuynh,
      name: 'Vũ Quỳnh',
      comment: 'Ta không thể bắt đầu lại nhưng ta có thể mở đầu bây giờ và làm nên một kết thúc mới.',
      linkFB: 'https://www.facebook.com/vuquyh202/',

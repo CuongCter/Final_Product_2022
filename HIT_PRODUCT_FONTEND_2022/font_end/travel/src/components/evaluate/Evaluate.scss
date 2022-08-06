@@ -3,24 +3,29 @@
   margin: 0;
   padding: 0;
 }
+
 .evaluate {
   background-color: white;
   width: 100%;
   padding: 45px 126px 45px 126px;
 }
+
 .infoE {
   display: flex;
   border-bottom: 0.25px solid rgba(0, 0, 0, 0.5);
   padding: 15px;
 }
+
 .imgE {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   left: 326px;
   top: 2737px;
   border-radius: 5px;
   padding: 2px;
+  object-fit: cover;
 }
+
 .info-cmt {
   border-bottom: 0.25px solid rgba(0, 0, 0, 0.5);
   display: flex;
@@ -28,19 +33,21 @@
   width: 100%;
   padding: 35px 0px 55px 0px;
 }
+
 .theme-evaluate {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 33px;
   color: #000000;
 }
-.theme-evaluate-small{
+
+.theme-evaluate-small {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 16px;
   color: #5CB660;
 
 }
+
 .infoE-name {
   font-weight: 700;
   font-size: 14px;
@@ -49,74 +56,86 @@
   padding-right: 10px;
   padding-top: 12px;
 }
+
 .people-el {
   width: 100%;
-  
+
 }
 
 .avt {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  
+  object-fit: cover;
 }
-.name > p {
+
+.name>p {
   font-weight: 700;
   font-size: 14px;
-  line-height: 19px;
+  margin-bottom: 5px;
   color: #000000;
-  
+
 }
+
 .premiumTwin {
   display: flex;
 }
-.premiumTwin > p {
+
+.premiumTwin>p {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
   margin-left: 2px;
 }
+
 .date {
   display: flex;
   margin-left: 2px;
 }
-.date > p {
+
+.date>p {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
   margin-left: 2px;
 }
+
 .time {
   display: flex;
 
 }
-.time > p {
+
+.time>p {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
   margin-left: 7px;
 }
+
 .evaluatee {
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
 }
+
 .coment {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
 }
+
 .point {
   font-weight: 700;
   font-size: 30px;
   line-height: 41px;
   color: #00B6F3;
 }
+
 .cmtt {
   font-weight: 400;
   font-size: 14px;
@@ -133,9 +152,11 @@
 .people-info {
   width: 15%;
 }
+
 .evaluatee-coment {
   width: 65%;
 }
+
 .point-cmt {
   background: #F2FBFE;
   border-radius: 5px;
@@ -144,11 +165,13 @@
   text-align: center;
   margin-top: 15px;
 }
+
 .xt {
-  padding: 25px 40px ;
-  
+  padding: 25px 40px;
+
 }
-.xt > p {
+
+.xt>p {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
@@ -158,29 +181,30 @@
 
 // **************************************
 // Tablet
-@media only screen and (min-width: 740px) and (max-width:1023px) { 
+@media only screen and (min-width: 740px) and (max-width:1023px) {
   .evaluate {
     width: 100%;
     padding: 45px 25px 45px 25px;
   }
+
   .point-cmt {
     display: none;
   }
 }
- 
- // Mobile
- @media only screen and (max-width: 739px) {
+
+// Mobile
+@media only screen and (max-width: 739px) {
   .evaluate {
     background-color: white;
     width: 100%;
     padding: 45px 25px 45px 25px;
   }
+
   .point-cmt {
     display: none;
   }
+
   .people-info {
     display: none;
   }
- }
-
- 
+}

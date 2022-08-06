@@ -182,10 +182,10 @@ const ChooseRom = () => {
                   <img src={dataBestSeller[index + a].linkImg} alt="" />
                 </div>
                 <div className='room-pic__list_i'>
-                  <img src={dataBestSeller[index + a].linkImg} alt="" />
+                  <img src={dataBestSeller[index + a + 3].linkImg} alt="" />
                 </div>
                 <div className='room-pic__list_i'>
-                  <img src={dataBestSeller[index + a].linkImg} alt="" />
+                  <img src={dataBestSeller[index + a + 6].linkImg} alt="" />
                 </div>
               </div>
               <div className='mt-[16px]'>
@@ -248,12 +248,12 @@ const ChooseRom = () => {
                 </div>
                 <div className='room-info__main_book'>
                   <div className='mt-[55px]'>
-                    <span className='bg-pink-500 rounded-lg px-2 py-1 text-white'>-10%</span>
-                    <h2 className='mt-1 line-through'>{numberWithCommas(item.price)}</h2>
-                    <h1 className='font-bold'>{numberWithCommas(item.price * 0.9)}</h1>
+                    <span className='bg-[#FC5981] rounded-lg px-2 py-1 text-white'>-10%</span>
+                    <h2 className='mt-1 line-through'>{item.price}đ</h2>
+                    <h1 className='font-bold'>{item.price * 0.9}đ</h1>
                     <h1>/phòng/đêm</h1>
                     <Link to={`/bookRoom/${item.id}`}>
-                      <button className='bg-pink-500 mt-2 rounded-lg border-none px-4 py-2 hover:ease-in  hover:duration-200'>Đặt phòng</button>
+                      <button className='bg-[#FC5981] mt-2 rounded-lg border-none px-4 py-2 hover:ease-in  hover:duration-200'>Đặt phòng</button>
                     </Link>
                   </div>
                 </div>

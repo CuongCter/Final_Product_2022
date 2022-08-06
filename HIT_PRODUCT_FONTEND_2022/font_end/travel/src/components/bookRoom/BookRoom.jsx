@@ -102,9 +102,9 @@ const BookRoom = () => {
                                 <div>
                                     <div className='flex'>
                                         <h1 className='bg-[#FC5981] pl-1 pr-1 rounded mr-2'>-10%</h1>
-                                        <h1 className='line-through '>{numberWithCommas(arr.price)}</h1>
+                                        <h1 className='line-through '>{arr.price}đ</h1>
                                     </div>
-                                    <h1 className='font-bold flex-e grid justify-items-end'>{numberWithCommas(arr.price * 0.9)}</h1>
+                                    <h1 className='font-bold flex-e grid justify-items-end'>{arr.price * 0.9}.đ</h1>
                                 </div>
                             </div>
                             <div className='flex justify-between py-3 border-b-[2px]'>
@@ -117,7 +117,7 @@ const BookRoom = () => {
                                     <h1>Đã bao gồm thuế , phí, VAT</h1>
                                 </div>
 
-                                <h1 className='font-bold'>1.776.602đ</h1>
+                                <h1 className='font-bold'>{arr.price * 0.9 - 253533}.đ</h1>
                             </div>
                         </div>
                     </div>

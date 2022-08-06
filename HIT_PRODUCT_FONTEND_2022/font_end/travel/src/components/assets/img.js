@@ -9,6 +9,7 @@ import cuong from './imgs/Cuong.JPG'
 import dung from './imgs/Dung.jpg'
 import namanh from './imgs/NamAnh.png'
 import hoang from './imgs/Hoang.jpg'
+import quynh from './imgs/Quynh.jpg'
 export const imgs = {
     imgSale: sale,
     img1: hanoi,
@@ -26,5 +27,6 @@ export const imgs = {
     imgCuong : cuong,
     imgDung: dung,
     imgHoang: hoang,
-    imgNamAnh: namanh
+    imgNamAnh: namanh,
+    imgQuynh: quynh
 }

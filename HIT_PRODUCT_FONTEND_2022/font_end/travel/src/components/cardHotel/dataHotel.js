@@ -18,7 +18,7 @@ export const dataHotel = [
         price: "1.519.384đ",
         pay: "1.093.007đ",
         linkImg: "https://image.bnews.vn/MediaUpload/Org/2016/10/03/145755_intercontinental-danang-sun-peninsula-resort.jpg ",
-        point: "9.4",
+        point: "9.3",
         cmt:"Tuyệt vời (104 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
@@ -30,7 +30,7 @@ export const dataHotel = [
         price: "1.519.384đ",
         pay: "1.093.007đ",
         linkImg: "http://reviewvilla.vn/wp-content/uploads/2022/04/Hilton-Da-Nang-1.jpeg",
-        point: "9.4",
+        point: "9.2",
         cmt:"Tuyệt vời (104 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
@@ -42,7 +42,7 @@ export const dataHotel = [
         price: "1.519.384đ",
         pay: "1.093.007đ",
         linkImg: "https://resortdanang.info/wp-content/uploads/2019/01/toan-canh-sheraton-resort-da-nang-1024x576.jpg",
-        point: "9.4",
+        point: "9.1",
         cmt:"Tuyệt vời (104 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
@@ -54,7 +54,7 @@ export const dataHotel = [
         price: "1.519.384đ",
         pay: "1.093.007đ",
         linkImg: "https://q-cf.bstatic.com/images/hotel/max1024x768/173/173384842.jpg",
-        point: "9.4",
+        point: "9.8",
         cmt:"Tuyệt vời (104 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
@@ -66,7 +66,7 @@ export const dataHotel = [
         price: "1.519.384đ",
         pay: "1.093.007đ",
         linkImg: "https://cdn.nhatrangbooking.com.vn/images/uploads/02222020035050022-khach-san-florida-nha-trang.jpg",
-        point: "9.4",
+        point: "9.9",
         cmt:"Tuyệt vời (104 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"
@@ -78,7 +78,7 @@ export const dataHotel = [
         price: "1.519.384đ",
         pay: "1.093.007đ",
         linkImg: "https://phuquoc.intercontinental.com/uploads/phuquoc/homepage/Sunset%20View%20from%20Resort%20%26%20Ombra%20-%2016x9.jpg",
-        point: "9.4",
+        point: "9.7",
         cmt:"Tuyệt vời (104 đánh giá)",
         time:"Vừa đặt cách đây 14 giờ",
         bought: "0"

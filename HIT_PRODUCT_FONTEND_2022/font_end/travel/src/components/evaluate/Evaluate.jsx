@@ -5,7 +5,7 @@ import './Evaluate.scss'
 const evaluate = () => {
   return (
     <div className='evaluate'>
-      <p className='theme-evaluate'>Đánh giá</p>
+      <p className='theme-evaluate '>Đánh giá</p>
       <p className='theme-evaluate-small'>100% đánh giá từ khách hàng đặt phòng trên Hello Travel</p>
       <div className='infoE'>
         <div className='infoE-name'>Ảnh người dùng đánh giá</div>
