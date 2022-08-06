@@ -13,7 +13,7 @@ const Locations = () => {
       <Banner />
       <Location />
       <TopPosts />
-      <RecentPosts />
+      {/* <RecentPosts /> */}
       <Footer />
 
     </div>

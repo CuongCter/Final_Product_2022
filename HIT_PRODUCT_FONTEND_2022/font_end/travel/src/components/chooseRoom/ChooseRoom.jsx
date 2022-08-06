@@ -226,7 +226,7 @@ const ChooseRom = () => {
               </div>
               <div className='room-info__main'>
                 <div className='room-info__main_services pt-4'>
-                  <h1>Lựa chọn 1</h1>
+
                   <div className='icon-1 mt-2'>
                     <div className='icon-11'><FontAwesomeIcon icon={faUtensils} className='mr-5' /></div>
                     <p >Bữa sáng miễn phí</p></div>

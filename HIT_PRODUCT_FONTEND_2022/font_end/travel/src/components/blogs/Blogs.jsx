@@ -1,6 +1,6 @@
 import React from 'react'
 import { dataBlogs } from './dataBlogs'
-
+import { Link } from 'react-router-dom'
 import './Blogs.scss'
 
 const Blogs = () => {
@@ -30,7 +30,10 @@ const Blogs = () => {
       </div>
 
       <div className="text-center mt-10 text-xl ">
-        <button className="px-5 py-2 text-pink-400 back bg-white border-pink-400">Xem tất cả</button>
+        <Link to='/blog'>
+          <button className="px-5 py-2 text-pink-400 back bg-white border-pink-400">Xem tất cả</button>
+        </Link>
+
       </div>
     </div>
   )

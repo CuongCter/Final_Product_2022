@@ -6,41 +6,41 @@ import { dataBlog } from './dataBlog'
 import { dataBlogg } from './dataBlogg'
 
 const Blogg = () => {
-  
+
   return (
     <div className='blog'>
       <div className='blogg-left'>
         <p className='heading '> Những lăng kính mới</p>
         <p className='heading-small mb-2'>Những góc nhìn mới qua từng câu chuyện</p>
         <Link to='/insideBlog'>
-        <div>
-          {dataBlog.map((item, index) => {
-            return (
-              <div key={index} className="">
-                <div className='blog-right  '>
-                  <img className='imgCXG mb-4' src={item.imgCXG} alt="" />
-                  <div>
-                    <p className='theme-blog ml-2'>{item.title}</p>
-                    <div className='line-offer '>
-                      <div className='nameDS ml-2'>{item.nameDS}</div>
-                      <div className='icon-time ml-5'>
-                        <i class="fa-regular fa-clock"></i>
-                        <p className='time-ac ml-1'>{item.time}</p>
+          <div>
+            {dataBlog.map((item, index) => {
+              return (
+                <div key={index} className="">
+                  <div className='blog-right  '>
+                    <img className='imgCXG mb-4' src={item.imgCXG} alt="" />
+                    <div>
+                      <p className='theme-blog ml-2'>{item.title}</p>
+                      <div className='line-offer '>
+                        <div className='nameDS ml-2'>{item.nameDS}</div>
+                        <div className='icon-time ml-5'>
+                          <i class="fa-regular fa-clock"></i>
+                          <p className='time-ac ml-1'>{item.time}</p>
+                        </div>
+                        <div className='icon-ac ml-5'>
+                          <i class="fa-regular fa-comment"></i>
+                          <p className='ml-1'>{item.amountCmt}</p>
+                        </div>
                       </div>
-                      <div className='icon-ac ml-5'>
-                        <i class="fa-regular fa-comment"></i>
-                        <p className='ml-1'>{item.amountCmt}</p>
-                      </div>
+                      <p className='cmt-blog ml-2'>{item.cmt}</p>
                     </div>
-                    <p className='cmt-blog ml-2'>{item.cmt}</p>
                   </div>
                 </div>
-              </div>
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
         </Link>
-        
+
       </div>
 
       <div className='blog-info-right'>
@@ -73,7 +73,7 @@ const Blogg = () => {
             )
           })}
         </div>
-        
+
       </div>
     </div>
   )

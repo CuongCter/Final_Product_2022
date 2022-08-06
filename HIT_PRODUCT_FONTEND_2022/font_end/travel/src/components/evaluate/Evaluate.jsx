@@ -24,28 +24,28 @@ const evaluate = () => {
               <img className='avt' src={item.avt} alt="" />
               <div className='people-info'>
                 <div className='name'>
-                  <p>{ item.name}</p>
+                  <p>{item.name}</p>
                 </div>
                 <div className='date'>
                   <i class="fa-solid fa-pen"></i>
-                  <p>{item.date }</p>
+                  <p>{item.date}</p>
                 </div>
-                <div className='premiumTwin'>
+                <div className='premiumTwin '>
                   <i class="fa-solid fa-bed"></i>
-                  <p >Premium Twin</p>
+                  <p >{item.premiumTwin}</p>
                 </div>
                 <div className='time'>
-                <i class="fa-solid fa-calendar-days"></i>
-                  <p>{item.time }</p>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p>{item.time}</p>
                 </div>
               </div>
               <div className='evaluatee-coment'>
-                <p className='evaluatee'>{item.evaluate }</p>
-                <p className='coment'>{item.coment }</p>
+                <p className='evaluatee '>{item.evaluate}</p>
+                <p className='coment'>{item.coment}</p>
               </div>
               <div className='point-cmt'>
                 <p className='point'>{item.point}</p>
-                <p className='cmtt'>{item.cmt }</p>
+                <p className='cmtt'>{item.cmt}</p>
               </div>
             </div>
           )

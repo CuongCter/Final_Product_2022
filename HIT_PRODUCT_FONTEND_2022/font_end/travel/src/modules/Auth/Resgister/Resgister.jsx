@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
@@ -12,6 +12,7 @@ import { API } from '../const/const.api';
 
 
 const validate = (values) => {
+
     const errors = {};
     // if (!values.userName) {
     //     errors.userName = "Vui lòng nhập tên người dùng ";
@@ -36,7 +37,9 @@ const validate = (values) => {
     return errors;
 }
 
+
 const Resgister = () => {
+    const [type, setType] = useState("password");
     const navigate = useNavigate()
     const formik = useFormik({
         initialValues: {
@@ -120,7 +123,7 @@ const Resgister = () => {
                                 <input
                                     id="password"
                                     name="password"
-                                    type="password"
+                                    type="text"
                                     onChange={formik.handleChange}
                                     value={formik.values.password}
                                     className='inputSignup'
@@ -133,12 +136,21 @@ const Resgister = () => {
                                 <input
                                     id="comfirmPassword"
                                     name="confirmPassword"
-                                    type="password"
+                                    type={type}
                                     onChange={formik.handleChange}
                                     value={formik.values.confirmPassword}
                                     className='inputSignup'
                                     placeholder='Xác nhận mật khẩu'
                                 />
+                                
+                                {type === "password" ? (
+                                    <i class="fa-solid fa-eye" onClick={() => setType("text")}
+                                        className="icon-toggle-password"></i>
+                                ) : (
+
+                                    <i class="fa-solid fa-eye-slash" onClick={() => setType("password")}
+                                        className="icon-toggle-password"></i>
+                                )}
                                 <input
                                     id="fullName"
                                     name="fullName"

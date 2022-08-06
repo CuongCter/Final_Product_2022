@@ -7,14 +7,33 @@ import { Stack, Rating } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faBedPulse, faBoltLightning, faLocation, faLocationDot, faMoneyBill, faNotEqual, faNoteSticky, faUmbrellaBeach, faUserGroup, faUtensils, faWifi } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { dataBestSeller } from '../cardSale/data';
 import numberWithCommas from '../../utils/number'
-const BookRoom = () => {
+import storageService from '../../services/storage.service';
+import { useFormik } from 'formik';
+import { API } from '../../modules/Auth/const/const.api';
+const BookRoom = (values) => {
+
+    const navigate = useNavigate()
+    const idUser = storageService.get('id')
+    const handleBookRoom = () => {
+        const isLogin = storageService.get('isLogin')
+        if (isLogin === 'true') {
+            // navigate('/login')
+            // window.history.replaceState({}, "/");
+            // storageService.remove('isLogin')
+            alert("Bạn đã đặt phòng thành công");
+        } else {
+            alert("Bạn cần đăng nhập ");
+            navigate('/login')
+        }
+    }
     const { id } = useParams();
     useEffect(() => {
     }, []);
     const [arr, setArr] = useState([]);
+
     const fetchData = () => {
         return axios.get(`https://api-travell.herokuapp.com/api/v1/rooms/${id}`)
             .then((response) => {
@@ -26,6 +45,41 @@ const BookRoom = () => {
     useEffect(() => {
         fetchData()
     }, [])
+    const formik = useFormik({
+        initialValues: {
+            dateS: '',
+            monthS: '',
+            yearS: '',
+            dateE: '',
+            monthE: '',
+            yearE: '',
+
+
+        },
+        BookRoom,
+        onSubmit: async (values) => {
+            try {
+                // console.log(values);
+                // userService.resgister(values).then(data => {
+                //     console.log(data)
+                // })
+                const result = await axios.post(`${API}${idUser}/${id}`, {
+                    startedTime: values.yearS + values.monthS + values.dateS,
+                    endedTime: values.yearE + values.monthE + values.dateE
+                })
+
+                if (result.status === 200) {
+                    alert('OK')
+
+                }
+            }
+            catch (err) {
+                console.log(err);
+                
+            }
+
+        },
+    });
     return (
         <div>
             <div className='containerBookRoom'>
@@ -48,17 +102,36 @@ const BookRoom = () => {
                         </div>
                         <div className='bookRoom_put__date pt-[24px] pl-[24px]'>
                             <h1 className='text-[24px] font-bold '>Thông tin đặt phòng</h1>
+
                             <h1 className='text-[14px] font-bold mt-6 mr-2 mb-2'>Ngày bắt đầu</h1>
                             <div className='flex bookRoom_put__date-time'>
-                                <input type="text" placeholder='Ngày' className='pl-2' />
-                                <input type="text" placeholder='Tháng' className='pl-2' ></input>
-                                <input type="text" placeholder='Năm' className='pl-2' />
+                                {/* <input id="monthS" type="text" placeholder='Ngày' className='pl-2' ></input>
+                                <input id="monthS" type="text" placeholder='Tháng' className='pl-2' ></input>
+                                <input id="yearS" type="text" placeholder='Năm' className='pl-2' /> */}
+                                <input type="text" name="Ngày" id="dateS"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.dateS} placeholder='Ngày' className='pl-2' />
+                                <input type="text" name="Tháng" id="monthS"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.monthS} placeholder='Tháng' className='pl-2' />
+                                <input type="text" name="Ngày" id="yearS"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.yearS} placeholder='Năm' className='pl-2' />
                             </div>
                             <h1 className='text-[14px] font-bold mt-2 mr-2 mb-2'>Ngày kết thúc</h1>
                             <div className='flex bookRoom_put__date-time'>
-                                <input type="text" placeholder='Ngày' className='pl-2' />
-                                <input type="text" placeholder='Tháng' className='pl-2' />
-                                <input type="text" placeholder='Năm' className='pl-2' />
+                                {/* <input id="dayE" type="text" placeholder='Ngày' className='pl-2' />
+                                <input id="monthE" type="text" placeholder='Tháng' className='pl-2' />
+                                <input id="yearE" type="text" placeholder='Năm' className='pl-2' /> */}
+                                <input type="text" name="Ngày" id="dateE"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.dateE} placeholder='Ngày' className='pl-2' />
+                                <input type="text" name="Tháng" id="monthE"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.monthE} placeholder='Tháng' className='pl-2' />
+                                <input type="text" name="Ngày" id="yearE"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.yearE} placeholder='Năm' className='pl-2' />
                             </div>
                         </div>
                         <div className='bookRoom_put__voucher flex justify-between items-center '>
@@ -71,7 +144,10 @@ const BookRoom = () => {
                             </div>
                         </div>
                         <div className='justify-items-end grid mt-5 bookRoom_put__end'>
-                            <button className='w-[173px] h-[44px] bg-[#FC5981] border-none hover:ease-in  hover:duration-300 hover:text-black hover:bg-white  font-bold '>Đặt phòng</button>
+                            <form onSubmit={formik.handleSubmit}>
+                                <button type='submit' className='w-[173px] h-[44px] bg-[#FC5981] border-none hover:ease-in  hover:duration-300 hover:text-black hover:bg-white  font-bold ' onClick={handleBookRoom}>Đặt phòng</button>
+                            </form>
+
                             <h1 className='text-[13px] mt-3'>Bằng cách nhấn nút Thanh toán, bạn đồng ý với</h1>
                             <h1 className='text-[13px]'><span >Điều kiện và điều khoản</span> của chúng tôi</h1>
                         </div>

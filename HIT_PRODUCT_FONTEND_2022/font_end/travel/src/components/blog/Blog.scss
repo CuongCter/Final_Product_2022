@@ -12,9 +12,9 @@
 }
 
 .blogg-left {
-  width: 65%;
+  width: 70%;
   border-right: 0.25px solid rgba(0, 0, 0, 0.5);
-  padding-right: 70px;
+  padding-right: 30px;
 }
 
 .blog-info-right {
@@ -50,7 +50,6 @@
 .theme-blog {
   font-weight: 700;
   font-size: 20px;
-  line-height: 27px;
   color: #000000;
   white-space: normal;
   overflow: hidden;
@@ -70,9 +69,11 @@
 
 .nameDS {
   font-weight: 400;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 15px;
   color: #FF5F87;
+  margin-top: 1px;
+  margin-bottom: 2px;
 }
 
 .icon-time {
@@ -123,7 +124,7 @@
   height: 400px;
   border-radius: 5px;
   object-fit: cover;
-  
+
 }
 
 .theme-new {
