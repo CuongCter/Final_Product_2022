@@ -113,9 +113,9 @@ const ListHotel = () => {
                                             <div className='mt-1'>
                                                 <h2 className='text-sm'>Mã: <span className='text-sm text-blue-400'>DONNHE <button className='bg-blue-400 text-sm w-[40px]'>-5%</button></span></h2>
                                             </div>
-                                            <div>
+                                            {/* <div>
                                                 <h1 className='font-medium text-lg text-pink-400 text-base'>{dataList[index].pay}</h1>
-                                            </div>
+                                            </div> */}
                                         </div>
 
 

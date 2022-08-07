@@ -75,7 +75,7 @@ const BookRoom = (values) => {
             }
             catch (err) {
                 console.log(err);
-                
+
             }
 
         },
@@ -110,13 +110,13 @@ const BookRoom = (values) => {
                                 <input id="yearS" type="text" placeholder='Năm' className='pl-2' /> */}
                                 <input type="text" name="Ngày" id="dateS"
                                     onChange={formik.handleChange}
-                                    value={formik.values.dateS} placeholder='Ngày' className='pl-2' />
+                                     placeholder='Ngày' className='pl-2' />
                                 <input type="text" name="Tháng" id="monthS"
                                     onChange={formik.handleChange}
-                                    value={formik.values.monthS} placeholder='Tháng' className='pl-2' />
+                                     placeholder='Tháng' className='pl-2' />
                                 <input type="text" name="Ngày" id="yearS"
                                     onChange={formik.handleChange}
-                                    value={formik.values.yearS} placeholder='Năm' className='pl-2' />
+                                     placeholder='Năm' className='pl-2' />
                             </div>
                             <h1 className='text-[14px] font-bold mt-2 mr-2 mb-2'>Ngày kết thúc</h1>
                             <div className='flex bookRoom_put__date-time'>
@@ -125,13 +125,13 @@ const BookRoom = (values) => {
                                 <input id="yearE" type="text" placeholder='Năm' className='pl-2' /> */}
                                 <input type="text" name="Ngày" id="dateE"
                                     onChange={formik.handleChange}
-                                    value={formik.values.dateE} placeholder='Ngày' className='pl-2' />
+                                     placeholder='Ngày' className='pl-2' />
                                 <input type="text" name="Tháng" id="monthE"
                                     onChange={formik.handleChange}
-                                    value={formik.values.monthE} placeholder='Tháng' className='pl-2' />
+                                     placeholder='Tháng' className='pl-2' />
                                 <input type="text" name="Ngày" id="yearE"
                                     onChange={formik.handleChange}
-                                    value={formik.values.yearE} placeholder='Năm' className='pl-2' />
+                                     placeholder='Năm' className='pl-2' />
                             </div>
                         </div>
                         <div className='bookRoom_put__voucher flex justify-between items-center '>
