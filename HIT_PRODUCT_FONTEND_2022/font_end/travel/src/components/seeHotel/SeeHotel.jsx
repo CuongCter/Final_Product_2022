@@ -105,7 +105,7 @@ const SeeHotel = () => {
               </div>
             </div>
             <div className='cmt'>
-              <p className='comment'>Tuyệt vời, trải nghiệm tuyệt vời</p>
+              <p className='comment'>Tổng quan về khách sạn tuyệt vời</p>
               <p className='share'>{hotel.description}</p>
             </div>
           </div>

@@ -123,7 +123,7 @@ const Resgister = () => {
                                 <input
                                     id="password"
                                     name="password"
-                                    type="text"
+                                    type="password"
                                     onChange={formik.handleChange}
                                     value={formik.values.password}
                                     className='inputSignup'
@@ -142,7 +142,7 @@ const Resgister = () => {
                                     className='inputSignup'
                                     placeholder='Xác nhận mật khẩu'
                                 />
-                                
+
                                 {type === "password" ? (
                                     <i class="fa-solid fa-eye" onClick={() => setType("text")}
                                         className="icon-toggle-password"></i>

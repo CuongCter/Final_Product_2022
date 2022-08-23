@@ -75,18 +75,21 @@ const Navbar = () => {
                 <video className='vid' src='/videos/beach_-_3998 (Original).mp4' autoPlay loop muted />
             </div> */}
             <div className='w-screen md:h-[80px] lg:h-[56px] z-10 bg-zinc-200 fixed drop-shadow-lg '>
-                <div className='px-10 flex justify-between items-center w-full h-full '>
+                <div className=' flex justify-between items-center w-full h-full px-12'>
                     <div className='flex items-center '>
                         <h1 className='text-3xl font-bold xl:ml-10 sm:text-3xl'>
 
                             HelloTravel</h1>
-                        <ul className='hidden md:flex md:ml-40 text-lg font-normal '>
+
+                    </div>
+                    <div>
+                        <ul className=' md:flex text-lg font-normal '>
                             {dataHeader.map((item) => (
                                 <li><Link to={item.linkPage} onClick className='text-black font-medium'>{item.title}</Link></li>
                             ))}
                         </ul>
                     </div>
-                    <div className='hidden md:flex pr-4 lg:hidden xl:block'>
+                    <div className='hidden md:flex lg:hidden xl:block '>
                         {
                             isLogin ?
                                 <>
