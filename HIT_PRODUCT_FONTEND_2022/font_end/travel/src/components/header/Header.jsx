@@ -85,7 +85,7 @@ const Navbar = () => {
                     <div>
                         <ul className=' md:flex text-lg font-normal '>
                             {dataHeader.map((item) => (
-                                <li><Link to={item.linkPage} onClick className='text-black font-medium'>{item.title}</Link></li>
+                                <li className=''><Link to={item.linkPage} onClick className='text-black font-medium hover:text-blue-500'>{item.title}</Link></li>
                             ))}
                         </ul>
                     </div>
